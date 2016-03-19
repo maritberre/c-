@@ -89,16 +89,16 @@ int main()
 	HashTable myhash;
 	int input[] = {2, 4, 5, 6, 8, 100000, 2034, 5420};
 	for (auto const &i : input) {
-		for (int j = 0; j < 3; j++ ) {
+		for (int j = 0; j < 2; j++ ) {
 			myhash.insert(i*j, i);
 			cout << endl << "After inserting key[" << i << "], val[" << i << "]:" << endl;
 			myhash.print();
 		}
 	}
 	for (auto const &i : input) {
-		for (int j = 0; j < 3; j++ ) {
+		for (int j = 0; j < 2; j++ ) {
 			myhash.remove(i*j);
-			cout << endl << "After removing key[" << i << "], val[" << i << "]:" << endl;
+			cout << endl << "After removing key[" << i << "]:" << endl;
 			myhash.print();
 		}
 	}
