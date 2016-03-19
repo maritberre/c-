@@ -98,9 +98,11 @@ int main()
 	HashTable myhash;
 	int input[] = {2, 4, 5, 6, 8, 100000, 2034, 5420};
 	for (auto const &i : input) {
-		myhash.insert(i, i);
-		cout << endl << "After inserting key[" << i << "], val[" << i << "]:" << endl;
-		myhash.print();
+		for (int j = 0; j < 3; j++ ) {
+			myhash.insert(i, i);
+			cout << endl << "After inserting key[" << i << "], val[" << i << "] for the " << j << "th time:" << endl;
+			myhash.print();
+		}
 	}
 }
 
